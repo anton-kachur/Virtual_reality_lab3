@@ -137,6 +137,7 @@ function draw_primitive(type, color, vertices, texture_coords) {
 
 // calculates coordinates for matrix rotation
 function rotate_matrix(alpha, beta, gamma) {
+    const c = Math.PI/180;
     const x0 = Math.cos(beta? beta*c: 0);
     const y0 = Math.cos(gamma? gamma*c: 0);
     const z0 = Math.cos(alpha? alpha*c: 0);
