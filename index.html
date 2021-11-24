@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>TI-82 Kachur Anton lab3</title>
+    <script src="./Utils/trackball-rotator.js"></script>
+    <script src="./Utils/m4.js"></script>
+    <script src="shader.gpu"></script>
+    <script src="main.js"></script>
+    <style>
+        body {
+            background-color: white;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        #draw {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        #block {
+            position: absolute;
+            left: 0;
+            background-color: transparent;
+            padding: 25px;
+            text-align: center;
+        }
+        #block button{
+            border: none;
+            background-color: white;
+            font-size: 15px;
+            padding: 1px 5px;
+        }
+    </style>
+</head>
+<body onload="init().then()">
+    <div id='block'>
+        <button onclick="showFrame()">View mode</button>
+    </div>
+
+    <div id="canvas-holder" style="width: 100vw; height: 100vh">
+        <canvas id="draw"></canvas>
+    </div>
+</body>
+</html>
